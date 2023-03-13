@@ -60,10 +60,12 @@ def test_readable_function():
     go_to_companyname_homepage(page_url="https://companyname.com")
     find_registration_button_on_login_page(page_url="https://companyname.com/login", button_text="Register")
 
+
 def transform_text(func, *args):
     txt = f'{func.__name__.replace("_", " ").title()} [{", ".join(args)}]'
     print(txt)
     return txt
+
 
 def open_browser(browser_name):
     actual_result = transform_text(open_browser, browser_name)
